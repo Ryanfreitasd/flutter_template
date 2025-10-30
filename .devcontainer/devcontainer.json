@@ -3,66 +3,32 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
   "features": {
     "ghcr.io/devcontainers/features/flutter:1": {
-      "version": "latest",
-      "flutterVersion": "stable"
-    },
-    "ghcr.io/devcontainers/features/git:1": {
       "version": "latest"
     }
   },
   "customizations": {
     "vscode": {
-      "extensions": [
-        "Dart-Code.flutter",
-        "Dart-Code.dart-code",
-        "ms-vscode.vscode-json",
-        "bradlc.vscode-tailwindcss"
-      ],
+      "extensions": ["Dart-Code.flutter", "Dart-Code.dart-code"],
       "settings": {
         "dart.flutterSdkPath": "/usr/local/flutter",
         "dart.sdkPath": "/usr/local/flutter/bin/cache/dart-sdk",
         "dart.projectSearchPaths": ["./my_app"],
-        "dart.openDevTools": "flutter",
-        "terminal.integrated.defaultProfile.linux": "bash",
-        "terminal.integrated.shell.linux": "/bin/bash"
-      }
-    },
-    "codespaces": {
-      "repositories": {
-        "Ryanfreitasd/flutter_template": {
-          "permissions": {
-            "contents": "write",
-            "metadata": "read"
-          }
-        }
+        "terminal.integrated.cwd": "${workspaceFolder}/my_app"
       }
     }
   },
   "forwardPorts": [8080, 3000, 9100],
   "portsAttributes": {
     "8080": {
-      "label": "Flutter Web App",
-      "visibility": "public"
+      "label": "Flutter Web App"
     },
     "3000": {
-      "label": "Development Server",
-      "visibility": "public"
+      "label": "Development Server"
     },
     "9100": {
-      "label": "Flutter DevTools",
-      "visibility": "private"
+      "label": "Flutter DevTools"
     }
   },
   "postCreateCommand": "bash .devcontainer/setup-codespaces.sh",
-  "postStartCommand": "flutter config --no-analytics",
-  "remoteUser": "vscode",
-  "containerEnv": {
-    "FLUTTER_ROOT": "/usr/local/flutter",
-    "PUB_CACHE": "/home/vscode/.pub-cache",
-    "FLUTTER_WEB_AUTO_DETECT": "true"
-  },
-  "mounts": [
-    "source=flutter-pub-cache,target=/home/vscode/.pub-cache,type=volume"
-  ],
-  "updateContentCommand": "cd my_app && flutter pub get"
+  "remoteUser": "vscode"
 }
