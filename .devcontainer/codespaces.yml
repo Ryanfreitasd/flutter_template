@@ -1,0 +1,19 @@
+# GitHub Codespaces configuration
+# This file configures the GitHub Codespaces environment for Flutter development
+
+# Container configuration
+name: flutter-codespaces
+image: mcr.microsoft.com/devcontainers/base:ubuntu-22.04
+
+# Resource allocation for Codespaces
+hostRequirements:
+  cpus: 2
+  memory: 4gb
+  storage: 32gb
+
+# Prebuild configuration
+prebuild:
+  commands:
+    - flutter --version
+    - flutter pub get
+    - flutter doctor -v

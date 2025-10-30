@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flutter (Debug)",
+      "type": "dart",
+      "request": "launch",
+      "program": "my_app/lib/main.dart",
+      "cwd": "${workspaceFolder}/my_app",
+      "args": [],
+      "flutterMode": "debug"
+    },
+    {
+      "name": "Flutter (Profile)",
+      "type": "dart",
+      "request": "launch",
+      "program": "my_app/lib/main.dart",
+      "cwd": "${workspaceFolder}/my_app",
+      "args": [],
+      "flutterMode": "profile"
+    },
+    {
+      "name": "Flutter (Release)",
+      "type": "dart",
+      "request": "launch",
+      "program": "my_app/lib/main.dart",
+      "cwd": "${workspaceFolder}/my_app",
+      "args": [],
+      "flutterMode": "release"
+    }
+  ]
+}
