@@ -1,5 +1,11 @@
 # Como Testar o Dev Container Localmente
 
+## Versões Incluídas
+
+- **Flutter**: 3.35.7 (stable)
+- **Dart**: 3.9.2
+- **Ubuntu**: 22.04
+
 ## Pré-requisitos
 
 - Docker Desktop instalado e rodando
